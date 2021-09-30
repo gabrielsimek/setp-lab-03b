@@ -111,3 +111,13 @@ footer {
     }
 
   }
+
+  img {
+      width: 500px;
+      height: 500px;
+  }
+
+  /* .playing {
+      transform: scale(2);
+      box-shadow: 0 0 1rem blue;
+  } */

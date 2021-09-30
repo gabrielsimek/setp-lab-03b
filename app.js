@@ -1,8 +1,17 @@
-// import functions and grab DOM elements
+import { playAudio } from './utils.js';
+const images = document.querySelectorAll('img');
+const sounds = document.querySelectorAll('audio');
 
-// initialize global state
+images.forEach((image) => {
+    image.addEventListener('click', () => {
+        const sound = [...sounds].find(sound => sound.className === image.className);
+        playAudio(sound);
+    });
+});
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+window.addEventListener('keydown', (e) => {
+    sounds.forEach((sound) => {
+        if (sound.id[0] === e.key) playAudio(sound);
+    });
+});
+
